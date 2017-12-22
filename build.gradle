@@ -1,0 +1,20 @@
+group 'com.epam.spring'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    springVer = '5.0.2.RELEASE'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "org.springframework:spring-context:${springVer}"
+    compile "org.springframework:spring-context-support:${springVer}"
+}
